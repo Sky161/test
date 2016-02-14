@@ -1,3 +1,5 @@
+- var tplPath = "./"
+- var imgPath = tplPath + "img"
 doctype
 html(lang="ru")
 	head
@@ -9,5 +11,6 @@ html(lang="ru")
 		
 	body
 		main.content
-		footer
-		
+			include ./modules/menu
+			include ./modules/about
+			
