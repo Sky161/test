@@ -36,3 +36,10 @@
 
 @mixin transition($item)
 	transition: $item $transition-speed $transition-type
+
+@mixin bgHoverGenerate($color)
+	background: $color
+	@include transition(background)
+
+	&:hover
+		background: saturate($color, 30%)
