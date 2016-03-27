@@ -1,0 +1,6 @@
+{
+	"jquery":{
+		"path": "./app/components/jquery/dist/jquery.min.js",
+		"exports": "$"
+	}
+}
