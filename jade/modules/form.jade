@@ -6,12 +6,15 @@ section#form
 			.wrap
 				p.title Регистрация
 				.buttons
-					button.btn Регистрация из Вконтакте 
-					button.btn Регистрация из Facebook
-					button.btn Регистрация из Google Plus
-					button.btn Регистрация из #[span Яндекс]
+					.containView
+						button.btn Регистрация из Вконтакте 
+						button.btn Регистрация из Facebook
+						button.btn Регистрация из Google Plus
+						button.btn Регистрация из #[span Яндекс]
 					
-					a(href="#show") Другие
+					a.toggleButton.hide(href="#show").
+						Другие
+						#[i.fa.fa-angle-down]
 				p или
 				form
 					input(type="text" name="login" placeholder="Ваш логин или E-mail")

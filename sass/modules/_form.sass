@@ -10,6 +10,9 @@
 	background: #2c3e50
 
 	.sign-in
+		$heightBtn: 40px
+		$marginBottomBtn: 14px
+
 		box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5)
 		border-radius: 3px
 		box-sizing: border-box
@@ -29,26 +32,42 @@
 				color: #000
 
 			.btn
-				margin: 0 0 14px
+				margin: 0 0 $marginBottomBtn
 				border: none
 				width: 100%
-				height: 40px
+				height: $heightBtn
 				color: #fff
 
-			.buttons .btn
-				&:nth-child(1)
-					@include bgHoverGenerate(#3b5f94)
+			.buttons
+				.containView
+					overflow: hidden
+					height: ($heightBtn * 2) + ($marginBottomBtn * 2)
+					.btn
+						&:nth-child(1)
+							@include bgHoverGenerate(#3b5f94)
 
-				&:nth-child(2)
-					@include bgHoverGenerate(#323c89)
+						&:nth-child(2)
+							@include bgHoverGenerate(#323c89)
 
-				&:nth-child(3)
-					@include bgHoverGenerate(#da3d2c)
+						&:nth-child(3)
+							@include bgHoverGenerate(#da3d2c)
 
-				&:nth-child(4)
-					border: 2px solid #da3d2c
-					color: #000
-					@include bgHoverGenerate(#fff)
+						&:nth-child(4)
+							border: 2px solid #da3d2c
+							color: #000
+							@include bgHoverGenerate(#fff)
 
-					span
-						color: #da3d2c
+							span
+								color: #da3d2c
+
+				.toggleButton
+					$color: #52ac62
+
+					font-size: 14px
+					color: $color
+					font-weight: bold
+					text-decoration: none
+					float: right
+
+					&:hover
+						color: saturate($color, 30%)
