@@ -43,3 +43,28 @@
 
 	&:hover
 		background: saturate($color, 30%)
+
+@mixin colorHoverGenerate($color)
+	color: $color
+	@include transition(color)
+
+	&:hover
+		color: saturate($color, 30%)
+
+@mixin placeholderStyle($color)
+	&::-webkit-input-placeholder
+		color: $color
+	&::-moz-placeholder
+		color: $color
+	&:-moz-placeholder
+		color: $color
+	&:-ms-input-placeholder
+		color: $color
+	&:focus::-webkit-input-placeholder
+		color: transparent
+	&:focus::-moz-placeholder
+		color: transparent
+	&:focus:-moz-placeholder
+		color: transparent
+	&:focus:-ms-input-placeholder
+		color: transparent

@@ -17,10 +17,13 @@ section#form
 						i.fa.fa-angle-down
 				p или
 				form
-					input(type="text" name="login" placeholder="Ваш логин или E-mail")
-					input(type="password" name="pass" placeholder="Пароль")
-					.form-group
-						input(id="save" type="checkbox" name="save")
-						label(for="save") Запомнить меня
-						a(href="#") Забыли пароль?
+					.form-text
+						input(type="text" name="login" placeholder="Ваш логин или E-mail")
+						input(type="password" name="pass" placeholder="Пароль")
+					.row
+						.column
+							input(id="save" type="checkbox" name="save")
+							label(for="save") Запомнить меня
+						.column
+							a(href="#") Забыли пароль?
 					input.btn(type="submit" value="Зарегистрироваться")

@@ -21,7 +21,7 @@
 
 		.wrap
 			margin: 0 auto
-			width: 285px
+			width: 284px
 			text-align: center
 
 			.title
@@ -41,8 +41,8 @@
 			.buttons
 				.containView
 					overflow: hidden
-					height: ($heightBtn * 2) + ($marginBottomBtn * 2)
-					@include transition(height)
+					max-height: ($heightBtn * 2) + ($marginBottomBtn * 2)
+					@include transition(max-height)
 
 					.btn
 						&:nth-child(1)
@@ -63,19 +63,46 @@
 								color: #da3d2c
 
 				.show
-					height: auto
+					max-height: 100%
 
 				.toggleButton
-					$color: #52ac62
-
 					font-size: 14px
-					color: $color
 					font-weight: bold
 					text-decoration: none
 					float: right
-
-					&:hover
-						color: saturate($color, 30%)
+					@include colorHoverGenerate(#52ac62)
 
 					span
 						margin-right: 5px
+
+			p
+				margin: 41px 0 10px
+				color: #cdd0d4
+				font-size: 15px
+
+			form
+				.form-text
+					input
+						width: 100%
+						height: 38px
+						color: #000
+						border: 1px solid #e5e8ec
+						margin: 0 0 12px
+						border-radius: 2px
+						padding: 0 13px
+						font-size: 14px
+						@include placeholderStyle(#bdc2c9)
+
+				.row
+					display: flex
+					justify-content: space-between
+					font-size: 14px
+					margin: 18px 0 43px
+
+					.column
+						label
+							color: #000000
+
+						a
+							text-decoration: none
+							@include colorHoverGenerate(#2c88d5)
