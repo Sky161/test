@@ -11,6 +11,8 @@ $ = require 'jquery'
 
 #modules
 $form = require './modules/form'
+$ankorAnimate = require './modules/animate-ankor'
 
 $ ->
 	do $form.init
+	do $ankorAnimate.init

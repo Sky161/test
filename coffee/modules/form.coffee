@@ -29,4 +29,4 @@ module.exports.init = ->
 			$icon.removeClass 'fa-angle-up'
 				.addClass 'fa-angle-down'
 
-		$buttons.toggleClass 'show'
+		$buttons.toggleClass('show')
