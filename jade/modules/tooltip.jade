@@ -3,18 +3,21 @@ section#tooltip
 		h1 Всплывающая подсказка
 		
 		.tooltips
-			.tooltip-left
-				.tooltip-text Tooltip on the left
-				button.tooltip-target.btn left
-			.tooltip-top
+			.tooltip.top
 				.tooltip-text Tooltip on the top
 				button.tooltip-target.btn top
-			.tooltip-bottom
-				.tooltip-text Tooltip on the bottom
-				button.tooltip-target.btn bottom
-			.tooltip-right
+			.tooltip.top
+				.tooltip-text Tooltip on the top
+				a(href="#").tooltip-target top
+			.tooltip.left
+				.tooltip-text Tooltip on the left
+				button.tooltip-target.btn left
+			.tooltip.right
 				.tooltip-text Tooltip on the right
 				button.tooltip-target.btn right
-			.tooltip-top
+			.tooltip.bottom
+				.tooltip-text Tooltip on the bottom
+				button.tooltip-target.btn bottom
+			.tooltip.top
 				.tooltip-text Чтобы войти в систему кликните на кнопку
 				button.tooltip-target.btn Войти в систему

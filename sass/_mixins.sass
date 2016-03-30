@@ -68,3 +68,34 @@
 		color: transparent
 	&:focus:-ms-input-placeholder
 		color: transparent
+
+@mixin arrowGenerate($arrow, $color)
+	border: solid transparent
+	content: ""
+	position: absolute
+	border-color: rgba(0, 0, 0, 0)
+	border-width: 11px
+
+	@if $arrow == "top"
+		transform: translateX(-50%)
+		border-top-color: $color
+		top: 100%
+		left: 50%
+
+	@if $arrow == "left"
+		transform: translateY(-50%)
+		border-right-color: $color
+		top: 50%
+		right: 100%
+
+	@if $arrow == "right"
+		transform: translateY(-50%)
+		border-left-color: $color
+		top: 50%
+		left: 100%
+
+	@if $arrow == "bottom"
+		transform: translateX(-50%)
+		border-bottom-color: $color
+		bottom: 100%
+		left: 50%
