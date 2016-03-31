@@ -1,5 +1,5 @@
 ###
-* Main file scripts
+* Scripts for animate ankor
 *
 * @author Andrey Chechkin
 * @license GNU/AGPLv3

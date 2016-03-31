@@ -1,5 +1,5 @@
 ###
-* Main file scripts
+* Script for form
 *
 * @author Andrey Chechkin
 * @license GNU/AGPLv3

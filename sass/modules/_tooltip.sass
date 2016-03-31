@@ -31,18 +31,36 @@
 				padding: 9px
 				display: none
 
-			&.top .tooltip-text::after
-				@include arrowGenerate(top, #000)
-				@include size(0)
+			&.top .tooltip-text
+				top: -11px
+				transform: translateY(-100%)
 
-			&.left .tooltip-text::after
-				@include arrowGenerate(left, #000)
-				@include size(0)
+				&::after
+					@include arrowGenerate(top, #000)
+					@include size(0)
 
-			&.right .tooltip-text::after
-				@include arrowGenerate(right, #000)
-				@include size(0)
+			&.left .tooltip-text
+				left: -11px
+				top: 50%
+				transform: translate(-100%, -50%)
 
-			&.bottom .tooltip-text::after
-				@include arrowGenerate(bottom, #000)
-				@include size(0)
+				&::after
+					@include arrowGenerate(left, #000)
+					@include size(0)
+
+			&.right .tooltip-text
+				right: -11px
+				top: 50%
+				transform: translate(100%, -50%)
+
+				&::after
+					@include arrowGenerate(right, #000)
+					@include size(0)
+
+			&.bottom .tooltip-text
+				bottom: -11px
+				transform: translateY(100%)
+
+				&::after
+					@include arrowGenerate(bottom, #000)
+					@include size(0)
