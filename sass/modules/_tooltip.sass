@@ -21,6 +21,9 @@
 			.btn
 				margin: 0
 
+			.sing-in
+				width: 200px
+
 			.tooltip-text
 				position: absolute
 				border-radius: 2px
@@ -30,9 +33,10 @@
 				box-sizing: border-box
 				padding: 9px
 				display: none
+				font-size: 14px
 
 			&.top .tooltip-text
-				top: -11px
+				top: -27px
 				transform: translateY(-100%)
 
 				&::after
@@ -40,7 +44,7 @@
 					@include size(0)
 
 			&.left .tooltip-text
-				left: -11px
+				left: -27px
 				top: 50%
 				transform: translate(-100%, -50%)
 
@@ -49,7 +53,7 @@
 					@include size(0)
 
 			&.right .tooltip-text
-				right: -11px
+				right: -27px
 				top: 50%
 				transform: translate(100%, -50%)
 
@@ -58,7 +62,7 @@
 					@include size(0)
 
 			&.bottom .tooltip-text
-				bottom: -11px
+				bottom: -27px
 				transform: translateY(100%)
 
 				&::after
