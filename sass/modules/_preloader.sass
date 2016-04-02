@@ -1,0 +1,49 @@
+/*
+ * Styles from section preload
+ *
+ * @author Andrey Chechkin
+ * @license GNU/AGPLv3
+ * @see {@link https://www.gnu.org/licenses/agpl-3.0.txt|License}
+ */
+
+#preloader
+	background: #3366cc
+
+	.container
+		position: relative
+
+	.preloader-container
+		$size: 50px
+		$margin: 6px
+
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+
+		.preloader-whirlpool
+			transform: rotate(-54deg)
+			animation: spinL 2s linear infinite
+			@include preloaderStyle()
+			@include size($size)
+
+			&::after
+				content: ""
+				transform: rotate(98deg)
+				top: -$margin - 1
+				left: -$margin - 1
+				animation: spinR 1s linear infinite
+				@include preloaderStyle()
+				@include size($size + $margin)
+
+			@keyframes spinR
+				0%
+					transform: rotate(0deg)
+				100%
+					transform: rotate(360deg)
+
+			@keyframes spinL
+				0%
+					transform: rotate(0deg)
+				100%
+					transform: rotate(-360deg)
