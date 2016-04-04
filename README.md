@@ -5,6 +5,6 @@
 > - cd test-ukit
 > - npm i
 
-##Start server and wathcer
+##Start server and watcher
 > - cd test-ukit
 > - gulp watch
