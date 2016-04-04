@@ -45,6 +45,42 @@ html
 				color: #fff
 				padding: 2%
 
+				@include small-media
+					width: auto
+					left: auto
+					top: 2%
+					right: 2%
+					background: none
+					height: auto
+					z-index: 0
+					padding: 0
+
+					h1
+						display: none
+
+				.show-menu
+					position: fixed
+					right: 2%
+					top: 2%
+					background: #000
+					border: none
+					display: none
+					z-index: 10
+					@include size(50px)
+
+					@include small-media
+						display: block
+
+				.show
+					display: block
+					animation: showMenu 300ms linear
+
+					@keyframes showMenu
+						0%
+							opacity: 0
+						100%
+							opacity: 1
+							
 				ul
 					padding: 0
 					margin: 20% 0 0
@@ -52,8 +88,17 @@ html
 					list-style: none
 					font-size: 25px
 
+					@include small-media
+						display: none
+						margin: 0
+						background: rgba(0, 0, 0, 0.8)
+						padding: 5%
+
 					li
 						margin: 0 0 20%
+
+						@include small-media
+							margin: 0 0 5%
 
 			.btn
 				display: inline-block
@@ -105,6 +150,11 @@ html
 				margin-left: 20%
 				padding: 2%
 				min-height: 100vh
+
+				@include small-media
+					min-height: 100%
+					margin: 0 auto
+					width: 100%
 
 			#buttons
 				background: #26A65B

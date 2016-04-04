@@ -13,8 +13,10 @@ $ = require 'jquery'
 $form = require './modules/form'
 $ankorAnimate = require './modules/animate-ankor'
 $tooltip = require './modules/tooltip'
+$menu = require './modules/menu'
 
 $ ->
 	do $form.init
 	do $ankorAnimate.init
 	do $tooltip.init
+	do $menu.init

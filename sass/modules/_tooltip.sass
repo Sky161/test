@@ -13,13 +13,17 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
+		flex-wrap: wrap
 		height: 82vh
+
+		@include small-media
+			height: 100%
 
 		.tooltip
 			position: relative
-
-			.btn
-				margin: 0
+			
+			@include small-media
+				margin: 0 0 20px
 
 			.sing-in
 				width: 200px
@@ -34,6 +38,7 @@
 				padding: 9px
 				display: none
 				font-size: 14px
+				z-index: 1
 
 			&.top .tooltip-text
 				top: -27px
